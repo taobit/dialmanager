@@ -32,10 +32,29 @@
         <activity
             android:name="com.tao.dialmanager.MainActivity"
             android:label="@string/app_name" >
+
+            <!-- Install app in launcher -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- Trigger to open Skype -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="skype" />
+            </intent-filter>
+            <intent-filter
+                android:icon="@drawable/ic_launcher"
+                android:priority="0" >
+                <action android:name="android.intent.action.CALL_PRIVILEGED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="tel" />
             </intent-filter>
         </activity>
         <!-- DIAL Receiver -->
