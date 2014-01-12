@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.util.Log;
 
 public class DialBroadcastReceiver extends BroadcastReceiver {
+	
+	private SharePreference pref;
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
